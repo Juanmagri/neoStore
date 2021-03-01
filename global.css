@@ -1,4 +1,18 @@
+html {
+   --white-font: #F5F2F2;
+   --black-font: #5C5C5C;
+}
+
 body {
-   height: 100vh;
-   background-image: linear-gradient(-30deg, #7653E3, #408AF5, #3DB2EB, #48BFE3);
+   height: 120vh;
+   background-image: linear-gradient(-30deg, #7F4BD2, #408AF5, #3DB2EB, #64DFDF);
+}
+
+footer {
+   background-color: var(--black-font);
+}
+
+footer a {
+   color: var(--white-font);
+   text-decoration: none;
 }
