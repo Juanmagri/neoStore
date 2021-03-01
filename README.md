@@ -1,1 +1,1 @@
-# neoStore
+# neoCurrency
