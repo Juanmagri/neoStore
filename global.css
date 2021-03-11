@@ -1,18 +1,23 @@
 html {
    --white-font: #F5F2F2;
+   --black-background: #3F3F3F;
    --black-font: #5C5C5C;
 }
 
 body {
-   height: 120vh;
+   height: 100vh;
    background-image: linear-gradient(-30deg, #7F4BD2, #408AF5, #3DB2EB, #64DFDF);
 }
 
 footer {
-   background-color: var(--black-font);
+   background-color: var(--black-background);
 }
 
 footer a {
-   color: var(--white-font);
+   color: grey;
    text-decoration: none;
+}
+
+footer a:hover {
+   color: var(--white-font);
 }
