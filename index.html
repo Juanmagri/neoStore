@@ -6,8 +6,10 @@
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
       <link href="./global.css" rel="stylesheet">
       <title>neoCurrency</title>
+      <script src="core.js" defer></script>
    </head>
    <body>
+      <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-dark pt-5 pb-4" >
          <div class="container">
             <a class="navbar-brand" href="#">neoCurrency</a>
@@ -38,7 +40,18 @@
             </div>
          </div>
       </nav>
-      <footer class="container-fluid p-4">
+      <!-- /Navbar -->
+
+      <!-- Main Content -->
+      <main class="container pt-3 pb-1">
+         <h3>Currency converter</h3>
+         <label for="Amount" class="form-label">Amount</label>
+         <input class="form-control" type="text" id="Amount">
+      </main>
+      <!-- /Main Content -->
+
+      <!-- Footer -->
+      <footer class="container-fluid p-4 mt-4">
          <div class="row text-center text-md-start">
             <div class="col-12 col-md">
                <div class="row">
@@ -77,6 +90,7 @@
             <p class="text-center pt-3" style="color: grey;">© 1999-2021</p>
          </div>
       </footer>
+            <!-- /Footer -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
    </body>
 </html>

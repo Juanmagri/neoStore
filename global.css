@@ -9,6 +9,26 @@ body {
    background-image: linear-gradient(-30deg, #7F4BD2, #408AF5, #3DB2EB, #64DFDF);
 }
 
+
+/* Navbar */
+.navbar-toggler:focus {
+   box-shadow: none;
+   border-color: white;
+}
+/* /Navbar */
+
+/* Main Content */
+main {
+   border-radius: .6rem;
+   background: var(--white-font);
+}
+
+.form-label {
+   width: 100px;
+}
+/* Main Content */
+
+/* Footer */
 footer {
    background-color: var(--black-background);
 }
@@ -21,3 +41,4 @@ footer a {
 footer a:hover {
    color: var(--white-font);
 }
+/* /Footer */
