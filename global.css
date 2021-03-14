@@ -18,13 +18,23 @@ body {
 /* /Navbar */
 
 /* Main Content */
-main {
-   border-radius: .6rem;
-   background: var(--white-font);
+
+/* main {
+   width: 1000px !important;
+} */
+
+.btn.pt-3{
+   border-radius: 0;
+   border-top-left-radius: .6rem;
+   border-top-right-radius: .6rem;
 }
 
-.form-label {
-   width: 100px;
+#cont-main {
+   background: var(--white-font);
+   border-bottom-left-radius: .6rem;
+   border-bottom-right-radius: .6rem;
+   border-top-right-radius: .6rem;
+
 }
 /* Main Content */
 
