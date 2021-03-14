@@ -9,11 +9,24 @@ body {
    background-attachment: fixed;
 }
 
+/* Landing */
+
+#landing-content {
+   display: flex;
+   height: 100%;
+   flex-direction: column;
+   justify-content: center;
+   color: var(--white-font);
+}
+
+/* /Landing */
+
+
 /* Main Content */
 
-/* main {
-   width: 1000px !important;
-} */
+main {
+   max-width: 1212px !important;
+}
 
 .btn.pt-3{
    width: 100%;
@@ -22,13 +35,13 @@ body {
    border-top-right-radius: .6rem !important;
 }
 
-
 #x-rate-btn {
    background: #DBD9D9;
    border-bottom-left-radius: .6rem !important;
 }
 
 #cont-main {
+   max-width: 1212px !important;
    background: var(--white-font);
    border-bottom-left-radius: .6rem;
    border-bottom-right-radius: .6rem;
