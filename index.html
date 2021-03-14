@@ -19,7 +19,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  <a class="nav-link" aria-current="page" href="#">Home</a>
                </li>
                <li class="nav-item">
                   <a class="nav-link" href="#">Exchange</a>
@@ -42,22 +42,31 @@
       </nav>
       <!-- /Navbar -->
 
+      <!-- Landing -->
+      <div class="container" style="height: 90vh;"></div>
+      <!-- /Landing -->
+
       <!-- Main Content -->
       <main class="container pt-3 pb-1">
-         <button class="btn pt-3" style="background: #DBD9D9;"><h5>Currency converter</h5></button><br>
+         <div class="row">
+            <div class="btn-group" role="group">
+               <button type="button" class="btn pt-3" style="background: var(--white-font);" id="c-converter-btn"><h5>Currency converter</h5></button>
+               <button type="button" class="btn pt-3" style="border: 1px var(--white-font) solid;" id="x-rate-btn"><h5>Exchange rate</h5></button><br>
+            </div>
+         </div>
          <div class="container pt-3 pb-4" id="cont-main">
             <div class="row px-4">
-               <div class="col-12 col-md-6 px-4">
+               <div class="col-12 col-md-6 px-4 pt-3">
                   <label class="form-label" for="Amount">Amount</label>
-                  <input class="form-control" type="text" id="Amount" placeholder="100">
+                  <input class="form-control" type="text" id="Amount" placeholder="1.00">
                </div>
-               <div class="col-12 col-md-3 px-4">
+               <div class="col-12 col-md-3 px-4 pt-3">
                   <label class="form-label" for="currency-from">From</label>
                   <select class="form-select" id="currency-from">
                      <option selected>EUR</option>
                   </select>
                </div>
-               <div class="col-12 col-md-3 px-4">
+               <div class="col-12 col-md-3 px-4 pt-3">
                   <label class="form-label" for="currency-to">To</label>
                   <select class="form-select" id="currency-to">
                      <option selected>USD</option>

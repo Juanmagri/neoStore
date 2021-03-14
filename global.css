@@ -5,17 +5,9 @@ html {
 }
 
 body {
-   height: 100vh;
-   background-image: linear-gradient(-30deg, #7F4BD2, #408AF5, #3DB2EB, #64DFDF);
+   background-image: linear-gradient(-42deg, #7F4BD2, #408AF5, #3DB2EB, #64DFDF);
+   background-attachment: fixed;
 }
-
-
-/* Navbar */
-.navbar-toggler:focus {
-   box-shadow: none;
-   border-color: white;
-}
-/* /Navbar */
 
 /* Main Content */
 
@@ -24,17 +16,23 @@ body {
 } */
 
 .btn.pt-3{
+   width: 100%;
    border-radius: 0;
-   border-top-left-radius: .6rem;
-   border-top-right-radius: .6rem;
+   border-top-left-radius: .6rem !important;
+   border-top-right-radius: .6rem !important;
+}
+
+
+#x-rate-btn {
+   background: #DBD9D9;
+   border-bottom-left-radius: .6rem !important;
 }
 
 #cont-main {
    background: var(--white-font);
    border-bottom-left-radius: .6rem;
    border-bottom-right-radius: .6rem;
-   border-top-right-radius: .6rem;
-
+   margin-top: -.6rem;
 }
 /* Main Content */
 
