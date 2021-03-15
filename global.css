@@ -12,10 +12,8 @@ body {
 /* Landing */
 
 #landing-content {
-   display: flex;
-   height: 100%;
    flex-direction: column;
-   justify-content: center;
+   height: 100%;
    color: var(--white-font);
 }
 
@@ -37,7 +35,7 @@ main {
 
 #x-rate-btn {
    background: #DBD9D9;
-   border-bottom-left-radius: .6rem !important;
+   border-bottom-left-radius: .9rem !important;
 }
 
 #cont-main {
