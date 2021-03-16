@@ -69,7 +69,7 @@ h1 {
 /* App */
 #app-module {
    margin-top: 9rem;
-   height: 48vh;
+   margin-bottom: 5rem;
 }
 
 #store-button{
