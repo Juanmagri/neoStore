@@ -66,6 +66,17 @@ h1 {
 
 /* /Cards */
 
+/* App */
+#app-module {
+   margin-top: 9rem;
+   height: 48vh;
+}
+
+#store-button{
+   float: right;
+}
+/* /App */
+
 /* Footer */
 footer {
    background-color: var(--black-background);
