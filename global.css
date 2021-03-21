@@ -2,6 +2,7 @@ html {
    --white-font: #F5F2F2;
    --black-background: #3F3F3F;
    --black-font: #5C5C5C;
+   --gray-button: #DBD9D9;
 }
 
 body {
@@ -15,7 +16,6 @@ h1 {
 }
 
 /* Landing */
-
 #landing-content {
    flex-direction: column;
    height: 100%;
@@ -26,7 +26,6 @@ h1 {
 
 
 /* Main Content */
-
 .wrapper {
    max-width: 1212px !important;
    padding-left: 1.5rem !important;
@@ -41,7 +40,7 @@ h1 {
 }
 
 #x-rate-btn {
-   background: #DBD9D9;
+   background: var(--gray-button);
    border-bottom-left-radius: .9rem !important;
 }
 
@@ -50,7 +49,13 @@ h1 {
    border-bottom-left-radius: .6rem;
    border-bottom-right-radius: .6rem;
    margin-top: -.6rem;
+   z-index: 2;
 }
+
+#converter {
+   background: var(--gray-button);
+}
+
 /* Main Content */
 
 /* Cards */
@@ -68,13 +73,9 @@ h1 {
 
 /* App */
 #app-module {
-   margin-top: 9rem;
-   margin-bottom: 5rem;
+   margin-top: 15rem;
 }
 
-#store-button{
-   float: right;
-}
 /* /App */
 
 /* Footer */
@@ -90,4 +91,5 @@ footer a {
 footer a:hover {
    color: var(--white-font);
 }
+
 /* /Footer */
