@@ -47,7 +47,7 @@
          <section class="mx-5 d-flex justify-content-center" id="landing-content">
             <h1 class="fs-1">Your currency converter of trust</h1>
             <p class="fs-6">The world meets neoCurrency+</p>
-            <button class="btn btn-outline-light" type="button" style="width: fit-content; color: var(--white-font);">Try it now</button>
+            <button class="btn btn-outline-light" type="button" id="landing-trial">Try it now</button>
          </section>
       </div>
       <!-- /Landing -->
@@ -171,7 +171,7 @@
                <section class="card mb-4 mx-1 mx-md-0 mx-lg-1">
                   <img class="card-image-top" src="" alt="">
                   <div class="card-body">
-                     <div class="card-title"><h6>Best App awarded</h6></div>
+                     <div class="card-title"><h6>Best App of the year</h6></div>
                      <p class="card-text"></p>
                   </div>
                </section>
@@ -190,10 +190,10 @@
                <p class="text-end" style="color: var(--white-font);">Your currencies
                right on your pocket</p>
                <a href="#">
-               <img class="mx-2 float-end me-0" src="img/appstore.png" alt="">
+               <img class="mx-2 float-end me-0 mb-2" src="img/appstore.png" alt="">
                </a>
                <a href="#">
-               <img class="mx-2 float-end" src="img/gplay.png" alt="">
+               <img class="mx-2 float-end me-0 me-md-1" src="img/gplay.png" alt="">
                </a>
             </div>
          </section>
@@ -220,7 +220,7 @@
                      <a href="#">Privacity</a>
                   </div>
                   <div class="row">
-                     <a href="#">Contact</a>
+                     <a href="" data-bs-toggle="modal" data-bs-target="#contact-modal">Contact</a>
                   </div>
                   <div class="row">
                      <a href="#">FAQ</a>
@@ -246,7 +246,7 @@
       <!-- /Contact -->
       <section class="modal fade" id="contact-modal"  tabindex="-1">
          <div class="modal-dialog modal-dialog modal-dialog-centered">
-            <div class="modal-content">
+            <div class="modal-content" id="my-modal-content">
                <div class="modal-header">
                   <h5 class="modal-title">Contact</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal"></button>

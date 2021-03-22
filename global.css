@@ -8,6 +8,7 @@ html {
 body {
    background-image: linear-gradient(-42deg, #7F4BD2, #408AF5, #3DB2EB, #64DFDF);
    background-attachment: fixed;
+   background-repeat: no-repeat;
 }
 
 h1 {
@@ -20,6 +21,17 @@ h1 {
    flex-direction: column;
    height: 100%;
    color: var(--white-font);
+}
+
+#landing-trial {
+   margin: 0 auto 0 0;
+   color: var(--white-font);
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:active,
+.btn-outline-light:active {
+   background-color: rgba(256, 256, 256, .2);
 }
 
 /* /Landing */
@@ -93,3 +105,10 @@ footer a:hover {
 }
 
 /* /Footer */
+
+/* Contact */
+#my-modal-content {
+   background-color: var(--white-font);
+}
+
+/* /Contact */
