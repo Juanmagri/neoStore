@@ -1,4 +1,7 @@
 const API = "https://api.exchangeratesapi.io/latest";
+let convert = document.querySelector("#converter");
+let from = document.querySelector("#currency-from");
+let to = document.querySelector("#currency-to");
 
 const getData = (URL_API) => {
    return new Promise((resolve, reject) => {
@@ -15,8 +18,15 @@ const getData = (URL_API) => {
    })
 }
 
+let usd;
 getData(API)
    .then(response1 => {
-      console.log(response1.rates.USD);
+      usd = response1.rates.USD;
    })
    .catch(err => console.error(err))
+
+convert.addEventListener("click", () => {
+   let fromValue = from.value;
+   let tooValue = to.value;
+   console.log(fromValue + " " + tooValue);
+})
