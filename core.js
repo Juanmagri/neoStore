@@ -1,7 +1,7 @@
+
+// API requests //
 const API = "https://api.exchangeratesapi.io/latest";
-let convert = document.querySelector("#converter");
-let from = document.querySelector("#currency-from");
-let to = document.querySelector("#currency-to");
+let exchange = document.querySelector("#exchanged");
 
 const getData = (URL_API) => {
    return new Promise((resolve, reject) => {
@@ -18,15 +18,32 @@ const getData = (URL_API) => {
    })
 }
 
-let usd;
+let usd, jpy;
 getData(API)
    .then(response1 => {
-      usd = response1.rates.USD;
+      USD = response1.rates.USD;    jpy = response1.rates.JPY;    jpy = response1.rates.JPY
+      exchange.innerHTML = USD;
+      
    })
    .catch(err => console.error(err))
 
+
+// /API requests //
+
+// Converter Script //
+let convert = document.querySelector("#converter");
+let amount = document.querySelector("#amount");
+let from = document.querySelector("#currency-from");
+let to = document.querySelector("#currency-to");
+let fromValue, toValue;
+
 convert.addEventListener("click", () => {
-   let fromValue = from.value;
-   let tooValue = to.value;
-   console.log(fromValue + " " + tooValue);
+   fromValue = from.value;
+   toValue = to.value;
+   amountSubmitted = amount.value;
+   if (fromValue === "EUR"  && toValue === "USD") {
+      exchange.innerHTML = USD * amountSubmitted;
+   }
 })
+
+// /Converter Script //
