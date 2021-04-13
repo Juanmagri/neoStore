@@ -1,22 +1,26 @@
 <!doctype html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-      <link href="./global.css" rel="stylesheet">
-      <title>neoCurrency</title>
-   </head>
-   <body>
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-dark pt-2 pt-md-5 pb-4">
-         <div class="container text-center">
-            <a class="navbar-brand" href="#">neoCurrency</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-               <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+   <link href="./global.css" rel="stylesheet">
+   <title>neoCurrency</title>
+</head>
+
+<body>
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-dark pt-2 pt-md-5 pb-4">
+      <div class="container text-center">
+         <a class="navbar-brand" href="#">neoCurrency</a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                <li class="nav-item">
                   <a class="nav-link" href="index.html">Home</a>
                </li>
@@ -32,253 +36,273 @@
                <li class="nav-item">
                   <a class="nav-link btn" data-bs-toggle="modal" data-bs-target="#contact-modal">Contact</a>
                </li>
-               </ul>
-               <form class="d-flex">
-                  <button class="btn btn-outline-light mx-auto">Download</button>
-               </form>
-            </div>
+            </ul>
+            <form class="d-flex">
+               <button class="btn btn-outline-light mx-auto">Download</button>
+            </form>
          </div>
-      </nav>
-      <!-- /Navbar -->
-
-      <!-- Landing -->
-      <div class="container px-4" style="height: 90vh;">
-         <section class="mx-5 d-flex justify-content-center" id="landing-content">
-            <h1 class="fs-1">Your currency converter of trust</h1>
-            <p class="fs-6">The world meets neoCurrency+</p>
-            <button class="btn btn-outline-light" type="button" id="landing-trial">Try it now</button>
-         </section>
       </div>
-      <!-- /Landing -->
+   </nav>
+   <!-- /Navbar -->
 
-      <!-- Main Content -->
-      <main class="container pt-3 pb-3 px-4 wrapper">
-         <div class="row mt-5" id="exchange">
-            <div class="btn-group" role="group">
-               <button type="button" class="btn pt-3" style="background: var(--white-font);" id="c-converter-btn"><h5>Currency converter</h5></button>
-               <button type="button" class="btn pt-3" id="x-rate-btn"><h5>Exchange rate</h5></button><br>
+   <!-- Landing -->
+   <div class="container px-4" style="height: 90vh;">
+      <section class="d-flex justify-content-center" id="landing-content">
+         <h1 class="fs-1">Your currency converter of trust</h1>
+         <p class="fs-6">The world meets neoCurrency+</p>
+         <button class="btn btn-outline-light" type="button" id="landing-trial">Try it now</button>
+      </section>
+   </div>
+   <!-- /Landing -->
+
+   <!-- Main Content -->
+   <main class="container pt-3 pb-3">
+      <div class="row mt-5" id="exchange">
+         <div class="btn-group" role="group">
+            <button type="button" class="btn pt-3" style="background: var(--white-font);" id="c-converter-btn">
+               <h5>Currency converter</h5>
+            </button>
+            <button type="button" class="btn pt-3" id="x-rate-btn">
+               <h5>Exchange rate</h5>
+            </button><br>
+         </div>
+      </div>
+      <div class="container pt-3 pb-4" id="cont-main">
+         <div class="row px-4">
+            <div class="col-12 col-md-6 px-4 pt-2">
+               <label class="form-label" for="amount">Amount</label>
+               <input class="form-control" type="text" id="amount" value="1.00">
+            </div>
+            <div class="col-12 col-md-3 px-4 pt-2">
+               <label class="form-label" for="currency-from">From</label>
+               <select class="form-select" id="currency-from">
+                  <option selected>EUR</option>
+                  <option>USD</option>
+                  <option>JPY</option>
+                  <option>AUD</option>
+                  <option>CAD</option>
+                  <option>CHF</option>
+                  <option>CNY</option>
+                  <option>HKD</option>
+                  <option>NZD</option>
+                  <option>SEK</option>
+                  <option>KRW</option>
+                  <option>SGD</option>
+                  <option>NOK</option>
+                  <option>MXN</option>
+                  <option>INR</option>
+                  <option>RUB</option>
+                  <option>ZAR</option>
+                  <option>TRY</option>
+                  <option>BRL</option>
+                  <option>DKK</option>
+               </select>
+            </div>
+            <div class="col-12 col-md-3 px-4 pt-2">
+               <label class="form-label" for="currency-to">To</label>
+               <select class="form-select" id="currency-to">
+                  <option selected>USD</option>
+                  <option>EUR</option>
+                  <option>JPY</option>
+                  <option>AUD</option>
+                  <option>CAD</option>
+                  <option>CHF</option>
+                  <option>CNY</option>
+                  <option>HKD</option>
+                  <option>NZD</option>
+                  <option>SEK</option>
+                  <option>KRW</option>
+                  <option>SGD</option>
+                  <option>NOK</option>
+                  <option>MXN</option>
+                  <option>INR</option>
+                  <option>RUB</option>
+                  <option>ZAR</option>
+                  <option>TRY</option>
+                  <option>BRL</option>
+                  <option>DKK</option>
+               </select>
             </div>
          </div>
-         <div class="container pt-3 pb-4 wrapper" id="cont-main">
-            <div class="row px-4">
-               <div class="col-12 col-md-6 px-4 pt-2">
-                  <label class="form-label" for="amount">Amount</label>
-                  <input class="form-control" type="text" id="amount" placeholder="1.00">
-               </div>
-               <div class="col-12 col-md-3 px-4 pt-2">
-                  <label class="form-label" for="currency-from">From</label>
-                  <select class="form-select" id="currency-from">
-                     <option value="EUR" selected>EUR</option>
-                     <option value="USD">USD</option>
-                     <option value="JPY">JPY</option>
-                     <option value="AUD">AUD</option>
-                     <option value="CAD">CAD</option>
-                     <option value="CHF">CHF</option>
-                     <option value="CNY">CNY</option>
-                     <option value="HKD">HKD</option>
-                     <option value="NZD">NZD</option>
-                     <option value="SEK">SEK</option>
-                     <option value="KRW">KRW</option>
-                     <option value="SGD">SGD</option>
-                     <option value="NOK">NOK</option>
-                     <option value="MXN">MXN</option>
-                     <option value="INR">INR</option>
-                     <option value="RUB">RUB</option>
-                     <option value="ZAR">ZAR</option>
-                     <option value="TRY">TRY</option>
-                     <option value="BRL">BRL</option>
-                  </select>
-               </div>
-               <div class="col-12 col-md-3 px-4 pt-2">
-                  <label class="form-label" for="currency-to">To</label>
-                  <select class="form-select" id="currency-to">
-                     <option value="USD" selected>USD</option>
-                     <option value="EUR">EUR</option>
-                     <option value="JPY">JPY</option>
-                     <option value="AUD">AUD</option>
-                     <option value="CAD">CAD</option>
-                     <option value="CHF">CHF</option>
-                     <option value="CNY">CNY</option>
-                     <option value="HKD">HKD</option>
-                     <option value="NZD">NZD</option>
-                     <option value="SEK">SEK</option>
-                     <option value="KRW">KRW</option>
-                     <option value="SGD">SGD</option>
-                     <option value="NOK">NOK</option>
-                     <option value="MXN">MXN</option>
-                     <option value="INR">INR</option>
-                     <option value="RUB">RUB</option>
-                     <option value="ZAR">ZAR</option>
-                     <option value="TRY">TRY</option>
-                     <option value="BRL">BRL</option>
-                  </select>
-               </div>
+         <div class="row px-4">
+            <div class="col-9 d-flex justify-content-end mx-4 my-4 px-0 border text-muted d-none" id="exchanged">
+               1.00
             </div>
-            <div class="row px-4">
-               <div class="col-9 d-flex justify-content-end mx-4 my-4 px-0 border text-muted" id="exchanged">
-                  1.00
-               </div>
-               <div class="col d-flex justify-content-end px-4">
+            <div class="col d-flex justify-content-end px-4">
                <button class="btn btn-light mt-4 px-4" id="converter" type="button">Convert</button>
-               </div>
             </div>
          </div>
-      </main>
-      <!-- /Main Content -->
-
-      <!-- Cards -->
-      <div class="container wrapper cards text-center" id="cards">
-         <h1 class="mb-4">Why us?</h1>
-         <section class="row" id="house-cards">
-            <div class="col-6 col-md d-none d-md-block">
-               <section class="card mb-4 mx-1 mx-md-0 mx-lg-1">
-                  <img class="card-image-top" src="" alt="">
-                  <div class="card-body">
-                     <div class="card-title"><h6>Financial news on the go</h6></div>
-                     <p class="card-text"></p>
-                  </div>
-               </section>
-            </div>
-            <div class="col-6 col-md">
-               <section class="card mb-4 mx-1 mx-md-0 mx-lg-1">
-                  <img class="card-image-top" src="" alt="">
-                  <div class="card-body">
-                     <div class="card-title"><h6>The world´s financial state</h6></div>
-                     <p class="card-text"></p>
-                  </div>
-               </section>
-            </div>
-            <div class="col-6 col-md d-md-block">
-               <section class="card mb-4 mx-1 mx-md-0 mx-lg-1">
-                  <img class="card-image-top" src="" alt="">
-                  <div class="card-body">
-                     <div class="card-title"><h6>European Central Bank based</h6></div>
-                     <p class="card-text"></p>
-                  </div>
-               </section>
-            </div>
-            <div class="col-6 col-md">
-               <section class="card mb-4 mx-1 mx-md-0 mx-lg-1">
-                  <img class="card-image-top" src="" alt="">
-                  <div class="card-body">
-                     <div class="card-title"><h6>Your watchlist in one place</h6></div>
-                     <p class="card-text"></p>
-                  </div>
-               </section>
-            </div>
-            <div class="col d-lg-block ">
-               <section class="card mb-4 mx-1 mx-md-0 mx-lg-1">
-                  <img class="card-image-top" src="" alt="">
-                  <div class="card-body">
-                     <div class="card-title"><h6>Best App of the year</h6></div>
-                     <p class="card-text"></p>
-                  </div>
-               </section>
-            </div>
-         </section>
       </div>
-      <!-- /Cards -->
+   </main>
+   <!-- /Main Content -->
 
-      <!-- App -->
-      <div class="container wrapper mb-5" id="app-module">
-         <section class="row">
-            <div class="col-12 col-lg-6">
-            </div>
-            <div class="col-12 col-lg-6">
-               <h1 class="text-center text-md-end">Download neoCurrency+</h1>
-               <p class="text-center text-md-end" style="color: var(--white-font);">Your currencies
-               right in your pocket</p>
-               <section class="d-flex d-md-block justify-content-center">
-                  <a href="#">
-                  <img class="mx-2 float-md-end me-0" src="img/appstore.png" alt="">
-                  </a>
-                  <a href="#">
-                  <img class="mx-2 float-md-end me-0 me-md-1" src="img/gplay.png" alt="">
-               </a>
-               </section>
-            </div>
-         </section>
-      </div>
-      <!-- /App -->
-
-      <!-- Footer -->
-      <footer class="container-fluid p-4 pb-2">
-         <div class="container py-4">
-            <div class="row text-center text-md-start">
-               <div class="col-12 col-md">
-                  <div class="row">
-                     <a href="#">Who we are</a>
+   <!-- Cards -->
+   <div class="container cards text-center" id="cards">
+      <h1 class="mb-4">Why us?</h1>
+      <section class="row" id="house-cards">
+         <div class="col-6 col-md d-none d-md-block">
+            <section class="card mb-4 mx-1 mx-md-0 mx-lg-1">
+               <img class="card-image-top" src="" alt="">
+               <div class="card-body">
+                  <div class="card-title">
+                     <h6>Financial news on the go</h6>
                   </div>
-                  <div class="row">
-                     <a href="#">About us</a>
-                  </div>
-                  <div class="row">
-                     <a href="#">Press</a>
-                  </div>
+                  <p class="card-text"></p>
                </div>
-               <div class="col-12 col-md">
-                  <div class="row">
-                     <a href="#">Privacity</a>
-                  </div>
-                  <div class="row">
-                     <a href="" data-bs-toggle="modal" data-bs-target="#contact-modal">Contact</a>
-                  </div>
-                  <div class="row">
-                     <a href="#">FAQ</a>
-                  </div>
-               </div>
-               <div class="col-12 col-md">
-                  <div class="row">
-                     <a href="#">Newsletter</a>
-                  </div>
-                  <div class="row">
-                     <a href="#">Apps</a>
-                  </div>
-                  <div class="row">
-                     <a href="#">ToS</a>
-                  </div>
-               </div>
-               <div class="col-12 col-md-4"></div>
-            </div>
+            </section>
          </div>
-      </footer>
-      <!-- /Footer -->
-
-      <!-- /Contact -->
-      <section class="modal fade" id="contact-modal"  tabindex="-1">
-         <div class="modal-dialog modal-dialog modal-dialog-centered">
-            <div class="modal-content" id="my-modal-content">
-               <div class="modal-header">
-                  <h5 class="modal-title">Contact</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-               </div>
-               <div class="modal-body">
-                  <div class="row">
-                     <div class="col-12 col-lg-6">
-                        <label class="form-label" for="first-name">First Name:</label><br>
-                        <input class="form-control" id="first-name" type="text" name="first-name">
-                     </div>
-                     <div class="col-12 col-lg-6">
-                        <label class="form-label" for="last-name">Last Name:</label><br>
-                        <input class="form-control" id="last-name" type="text" name="last-name">
-                     </div>
+         <div class="col-6 col-md">
+            <section class="card mb-4 mx-1 mx-md-0 mx-lg-1">
+               <img class="card-image-top" src="" alt="">
+               <div class="card-body">
+                  <div class="card-title">
+                     <h6>The world´s financial state</h6>
                   </div>
-                  <label class="form-label" for="email-cform">E-mail:</label><br>
-                  <input class="form-control" id="email-cform" type="email" name="email-cform">
-                  <label class="form-label" for="message">Message:</label><br>
-                  <textarea class="form-control" name="message" id="message" cols="30" rows="10" style="width: 100%;"></textarea>
+                  <p class="card-text"></p>
                </div>
-               <div class="modal-footer">
-                  <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
-                  <button type="submit" class="btn" style="background: var(--gray-button);">Send</button>
+            </section>
+         </div>
+         <div class="col-6 col-md d-md-block">
+            <section class="card mb-4 mx-1 mx-md-0 mx-lg-1">
+               <img class="card-image-top" src="" alt="">
+               <div class="card-body">
+                  <div class="card-title">
+                     <h6>European Central Bank based</h6>
+                  </div>
+                  <p class="card-text"></p>
                </div>
-            </div>
+            </section>
+         </div>
+         <div class="col-6 col-md">
+            <section class="card mb-4 mx-1 mx-md-0 mx-lg-1">
+               <img class="card-image-top" src="" alt="">
+               <div class="card-body">
+                  <div class="card-title">
+                     <h6>Your watchlist in one place</h6>
+                  </div>
+                  <p class="card-text"></p>
+               </div>
+            </section>
+         </div>
+         <div class="col d-lg-block ">
+            <section class="card mb-4 mx-1 mx-md-0 mx-lg-1">
+               <img class="card-image-top" src="" alt="">
+               <div class="card-body">
+                  <div class="card-title">
+                     <h6>Best App of the year</h6>
+                  </div>
+                  <p class="card-text"></p>
+               </div>
+            </section>
          </div>
       </section>
-      <!-- /Contact -->
+   </div>
+   <!-- /Cards -->
+
+   <!-- App -->
+   <div class="container mb-5" id="app-module">
+      <section class="row">
+         <div class="col-12 col-lg-6">
+         </div>
+         <div class="col-12 col-lg-6">
+            <h1 class="text-center text-md-end">Download neoCurrency+</h1>
+            <p class="text-center text-md-end" style="color: var(--white-font);">Your currencies
+               right in your pocket</p>
+            <section class="d-flex d-md-block justify-content-center">
+               <a href="#">
+                  <img class="mx-2 float-md-end me-0" src="img/appstore.png" alt="">
+               </a>
+               <a href="#">
+                  <img class="mx-2 float-md-end me-0 me-md-1" src="img/gplay.png" alt="">
+               </a>
+            </section>
+         </div>
+      </section>
+   </div>
+   <!-- /App -->
+
+   <!-- Footer -->
+   <footer class="container-fluid p-4 pb-2">
+      <div class="container py-4">
+         <div class="row text-center text-md-start">
+            <div class="col-12 col-md">
+               <div class="row">
+                  <a href="#">Who we are</a>
+               </div>
+               <div class="row">
+                  <a href="#">About us</a>
+               </div>
+               <div class="row">
+                  <a href="#">Press</a>
+               </div>
+            </div>
+            <div class="col-12 col-md">
+               <div class="row">
+                  <a href="#">Privacity</a>
+               </div>
+               <div class="row">
+                  <a href="" data-bs-toggle="modal" data-bs-target="#contact-modal">Contact</a>
+               </div>
+               <div class="row">
+                  <a href="#">FAQ</a>
+               </div>
+            </div>
+            <div class="col-12 col-md">
+               <div class="row">
+                  <a href="#">Newsletter</a>
+               </div>
+               <div class="row">
+                  <a href="#">Apps</a>
+               </div>
+               <div class="row">
+                  <a href="#">ToS</a>
+               </div>
+            </div>
+            <div class="col-12 col-md-4"></div>
+         </div>
+      </div>
+   </footer>
+   <!-- /Footer -->
+
+   <!-- /Contact -->
+   <section class="modal fade" id="contact-modal" tabindex="-1">
+      <div class="modal-dialog modal-dialog modal-dialog-centered">
+         <div class="modal-content" id="my-modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title">Contact</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+               <div class="row">
+                  <div class="col-12 col-lg-6">
+                     <label class="form-label" for="first-name">First Name:</label><br>
+                     <input class="form-control" id="first-name" type="text" name="first-name">
+                  </div>
+                  <div class="col-12 col-lg-6">
+                     <label class="form-label" for="last-name">Last Name:</label><br>
+                     <input class="form-control" id="last-name" type="text" name="last-name">
+                  </div>
+               </div>
+               <label class="form-label" for="email-cform">E-mail:</label><br>
+               <input class="form-control" id="email-cform" type="email" name="email-cform">
+               <label class="form-label" for="message">Message:</label><br>
+               <textarea class="form-control" name="message" id="message" cols="30" rows="10"
+                  style="width: 100%;"></textarea>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+               <button type="submit" class="btn" style="background: var(--gray-button);">Send</button>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- /Contact -->
 
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-      <script src="core.js"></script>
-   </body>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"></script>
+   <script src="core.js"></script>
+</body>
+
 </html>

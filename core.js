@@ -1,49 +1,42 @@
-
-// API requests //
-const API = "https://api.exchangeratesapi.io/latest";
-let exchange = document.querySelector("#exchanged");
-
-const getData = (URL_API) => {
-   return new Promise((resolve, reject) => {
-      let req = new XMLHttpRequest();
-      req.open("GET", URL_API, true);
-      req.onreadystatechange = () => {
-         if (req.readyState === 4) {
-            req.status = 200
-               ? resolve(JSON.parse(req.responseText))
-               : reject(new Error("Oops, error " + req.status));
-         }
-      }
-      req.send();
-   })
-}
-
-let usd, jpy;
-getData(API)
-   .then(response1 => {
-      USD = response1.rates.USD;    jpy = response1.rates.JPY;    jpy = response1.rates.JPY
-      exchange.innerHTML = USD;
-      
-   })
-   .catch(err => console.error(err))
-
-
-// /API requests //
-
 // Converter Script //
+let API = "https://api.ratesapi.io/api/latest";
+let exchange = document.querySelector("#exchanged");
 let convert = document.querySelector("#converter");
 let amount = document.querySelector("#amount");
 let from = document.querySelector("#currency-from");
 let to = document.querySelector("#currency-to");
-let fromValue, toValue;
 
-convert.addEventListener("click", () => {
-   fromValue = from.value;
-   toValue = to.value;
-   amountSubmitted = amount.value;
-   if (fromValue === "EUR"  && toValue === "USD") {
-      exchange.innerHTML = USD * amountSubmitted;
+const getCurrencies = async () => {
+   const response = await fetch(API);
+   const data = await response.json();
+   return data.rates;
+}
+
+const assignThem = async () => {
+   const currencyList = await getCurrencies();
+   let toValue = to.value;
+   let fromValue = from.value;
+   let amountSubmitted = amount.value;
+   let toCurr = currencyList[toValue];
+   let fromCurr = currencyList[fromValue];
+   if (fromValue === toValue) {
+   exchange.textContent = amountSubmitted;
+   } else if (fromValue === "EUR") {
+      exchange.textContent = (amountSubmitted * toCurr).toFixed(4);
+   } else if (toValue === "EUR") {
+      exchange.textContent = (amountSubmitted / fromCurr).toFixed(4);
+   } else {
+      exchange.textContent = ((amountSubmitted / fromCurr) / (amountSubmitted / toCurr)).toFixed(4);
    }
-})
+   exchange.classList.remove("d-none")
+}
+
+convert.addEventListener("click", assignThem);
+
+amount.addEventListener("keyup", (eve) => {
+   if (eve.keyCode === 13) {
+      convert.click()
+   }
+});
 
 // /Converter Script //
