@@ -68,69 +68,103 @@
          </div>
       </div>
       <div class="container pt-3 pb-4" id="cont-main">
-         <div class="row px-4">
-            <div class="col-12 col-md-6 px-4 pt-2">
-               <label class="form-label" for="amount">Amount</label>
-               <input class="form-control" type="text" id="amount" value="1.00">
+         <div id="cont-main-converter">
+            <div class="row px-4">
+               <div class="col-12 col-md-6 px-4 pt-2">
+                  <label class="form-label" for="amount">Amount</label>
+                  <input class="form-control" type="text" id="amount" value="1.00">
+               </div>
+               <div class="col-12 col-md-3 px-4 pt-2">
+                  <label class="form-label" for="currency-from">From</label>
+                  <select class="form-select" id="currency-from">
+                     <option selected>EUR</option>
+                     <option>USD</option>
+                     <option>JPY</option>
+                     <option>AUD</option>
+                     <option>CAD</option>
+                     <option>CHF</option>
+                     <option>CNY</option>
+                     <option>HKD</option>
+                     <option>NZD</option>
+                     <option>SEK</option>
+                     <option>KRW</option>
+                     <option>SGD</option>
+                     <option>NOK</option>
+                     <option>MXN</option>
+                     <option>INR</option>
+                     <option>RUB</option>
+                     <option>ZAR</option>
+                     <option>TRY</option>
+                     <option>BRL</option>
+                     <option>DKK</option>
+                  </select>
+               </div>
+               <div class="col-12 col-md-3 px-4 pt-2">
+                  <label class="form-label" for="currency-to">To</label>
+                  <select class="form-select" id="currency-to">
+                     <option selected>USD</option>
+                     <option>EUR</option>
+                     <option>JPY</option>
+                     <option>AUD</option>
+                     <option>CAD</option>
+                     <option>CHF</option>
+                     <option>CNY</option>
+                     <option>HKD</option>
+                     <option>NZD</option>
+                     <option>SEK</option>
+                     <option>KRW</option>
+                     <option>SGD</option>
+                     <option>NOK</option>
+                     <option>MXN</option>
+                     <option>INR</option>
+                     <option>RUB</option>
+                     <option>ZAR</option>
+                     <option>TRY</option>
+                     <option>BRL</option>
+                     <option>DKK</option>
+                  </select>
+               </div>
             </div>
-            <div class="col-12 col-md-3 px-4 pt-2">
-               <label class="form-label" for="currency-from">From</label>
-               <select class="form-select" id="currency-from">
-                  <option selected>EUR</option>
-                  <option>USD</option>
-                  <option>JPY</option>
-                  <option>AUD</option>
-                  <option>CAD</option>
-                  <option>CHF</option>
-                  <option>CNY</option>
-                  <option>HKD</option>
-                  <option>NZD</option>
-                  <option>SEK</option>
-                  <option>KRW</option>
-                  <option>SGD</option>
-                  <option>NOK</option>
-                  <option>MXN</option>
-                  <option>INR</option>
-                  <option>RUB</option>
-                  <option>ZAR</option>
-                  <option>TRY</option>
-                  <option>BRL</option>
-                  <option>DKK</option>
-               </select>
-            </div>
-            <div class="col-12 col-md-3 px-4 pt-2">
-               <label class="form-label" for="currency-to">To</label>
-               <select class="form-select" id="currency-to">
-                  <option selected>USD</option>
-                  <option>EUR</option>
-                  <option>JPY</option>
-                  <option>AUD</option>
-                  <option>CAD</option>
-                  <option>CHF</option>
-                  <option>CNY</option>
-                  <option>HKD</option>
-                  <option>NZD</option>
-                  <option>SEK</option>
-                  <option>KRW</option>
-                  <option>SGD</option>
-                  <option>NOK</option>
-                  <option>MXN</option>
-                  <option>INR</option>
-                  <option>RUB</option>
-                  <option>ZAR</option>
-                  <option>TRY</option>
-                  <option>BRL</option>
-                  <option>DKK</option>
-               </select>
+            <div class="row px-4">
+               <div class="col-9 d-flex justify-content-end mx-4 mt-4 px-0 border text-muted d-none" id="exchanged">
+                  1.00
+               </div>
+               <div class="col d-flex justify-content-end px-4">
+                  <button class="btn btn-light mt-4 px-4" id="convert" type="button">Convert</button>
+               </div>
             </div>
          </div>
-         <div class="row px-4">
-            <div class="col-9 d-flex justify-content-end mx-4 my-4 px-0 border text-muted d-none" id="exchanged">
-               1.00
-            </div>
-            <div class="col d-flex justify-content-end px-4">
-               <button class="btn btn-light mt-4 px-4" id="converter" type="button">Convert</button>
-            </div>
+         <div class="d-none px-4" id="cont-main-exchange">
+            <table class="table">
+               <thead>
+                  <tr>
+                     <th>Currency</th>
+                     <th>Amount</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr class="rate-row" style="color: rgb(13 110 253 / 45%)">
+                     <td>EUR</td>
+                     <td>1</td>
+                  </tr>
+                  <tr class="rate-row">
+                     <td>USD</td>
+                     <td></td>
+                  </tr>
+                  <tr class="rate-row">
+                     <td>CNY</td>
+                     <td></td>
+                  </tr>
+                  <tr class="rate-row">
+                     <td>JPY</td>
+                     <td></td>
+                  </tr>
+                  <tr class="rate-row">
+                     <td>AUD</td>
+                     <td></td>
+                  </tr>
+               </tbody>
+            </table>
          </div>
       </div>
    </main>

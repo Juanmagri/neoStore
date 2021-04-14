@@ -1,7 +1,30 @@
-// Converter Script //
+// Main content //
+let converter = document.querySelector("#cont-main-converter");
+let rates = document.querySelector("#cont-main-exchange");
+let converterAccess = document.querySelector("#c-converter-btn");
+let ratesAccess = document.querySelector("#x-rate-btn");
+
+converterAccess.addEventListener("click", () => {
+   converterAccess.style.backgroundColor = "var(--white-font)";
+   converterAccess.style.borderBottomRightRadius = "0.9rem";
+   ratesAccess.style.backgroundColor = "var(--gray-button)";
+   rates.classList.add("d-none");
+   converter.classList.remove("d-none");
+})
+
+ratesAccess.addEventListener("click", () => {
+   ratesAccess.style.backgroundColor = "var(--white-font)";
+   converterAccess.style.backgroundColor = "var(--gray-button)";
+   converter.classList.add("d-none");
+   rates.classList.remove("d-none");
+})
+
+// /Main content //
+
+// Converter //
 let API = "https://api.ratesapi.io/api/latest";
 let exchange = document.querySelector("#exchanged");
-let convert = document.querySelector("#converter");
+let convert = document.querySelector("#convert");
 let amount = document.querySelector("#amount");
 let from = document.querySelector("#currency-from");
 let to = document.querySelector("#currency-to");
@@ -39,4 +62,25 @@ amount.addEventListener("keyup", (eve) => {
    }
 });
 
-// /Converter Script //
+// /Converter //
+
+
+// Exchange Rate //
+const getRates = async () => {
+   const currencyList = await getCurrencies();
+   let rateRows = document.querySelectorAll(".rate-row");
+   let equivalent = document.query;
+   let i = 0;
+   while (i < rateRows.length) {
+      // console.log("jeje")
+      let a = rateRows[i].querySelector("td").textContent;
+      rateRows[i].textContent;
+      i++;
+   }
+   // document.querySelectorAll(".rate-row")[0].textContent = currencyList.USD;
+
+}
+
+getRates();
+
+// /Exchange Rate //

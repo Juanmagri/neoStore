@@ -39,6 +39,10 @@ h1 {
    background-color: rgba(256, 256, 256, 0.2);
 }
 
+.rate-row:hover {
+   background-color: rgba(92, 160, 255, 0.06);
+}
+
 /* /Landing */
 
 /* Main Content */
@@ -47,6 +51,10 @@ h1 {
    border-radius: 0;
    border-top-left-radius: 0.6rem !important;
    border-top-right-radius: 0.6rem !important;
+}
+
+#c-converter-btn {
+   border-bottom-right-radius: 0.9rem !important;
 }
 
 #x-rate-btn {
@@ -58,11 +66,11 @@ h1 {
    background: var(--white-font);
    border-bottom-left-radius: 0.6rem;
    border-bottom-right-radius: 0.6rem;
-   margin-top: -0.6rem;
+   margin-top: -0.9rem;
    z-index: 2;
 }
 
-#converter {
+#convert {
    background: var(--gray-button);
 }
 
