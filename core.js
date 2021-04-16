@@ -45,11 +45,11 @@ const assignThem = async () => {
    if (fromValue === toValue) {
    exchange.textContent = amountSubmitted;
    } else if (fromValue === "EUR") {
-      exchange.textContent = (amountSubmitted * toCurr).toFixed(4);
+      exchange.textContent = parseFloat((amountSubmitted * toCurr).toFixed(4));
    } else if (toValue === "EUR") {
-      exchange.textContent = (amountSubmitted / fromCurr).toFixed(4);
+      exchange.textContent = parseFloat((amountSubmitted / fromCurr).toFixed(4));
    } else {
-      exchange.textContent = ((amountSubmitted / fromCurr) / (amountSubmitted / toCurr)).toFixed(4);
+      exchange.textContent = parseFloat(((amountSubmitted / fromCurr) / (amountSubmitted / toCurr)).toFixed(4));
    }
    exchange.classList.remove("d-none")
 }
@@ -66,14 +66,13 @@ amount.addEventListener("keyup", (eve) => {
 
 
 // Exchange rate chart//
+let rateRows = document.querySelectorAll(".rate-row");
+
 const getRates = async () => {
    const currencyList = await getCurrencies();
-   let rateRows = document.querySelectorAll(".rate-row");
    let i = 1;
-
    while (i < rateRows.length) {
       let curr = rateRows[i].querySelectorAll("td")[0].textContent;
-
       rateRows[i].querySelectorAll("td")[1].textContent = currencyList[curr];
       i++;
    }
@@ -81,9 +80,22 @@ const getRates = async () => {
 
 getRates();
 
-
-const a = (n) => {
-   document.querySelectorAll(".rate-row")[n].querySelectorAll("td")[1].textContent = 1;
+const a = async (n) => {
+   const currencyList = await getCurrencies();
+   let currF = rateRows[n].querySelectorAll("td")[0].textContent;
+   for (let i = 0; i < rateRows.length; i++) {
+      let curr2 = rateRows[i].querySelectorAll("td")[0].textContent;
+      if (n === 0) {
+         getRates();
+      } else {
+         rateRows[i].querySelectorAll("td")[1].textContent = parseFloat(((currencyList[curr2] / currencyList[currF])).toFixed(3));
+         rateRows[0].querySelectorAll("td")[1].textContent = parseFloat((1 / currencyList[currF]).toFixed(3));
+      }
+      rateRows[i].style.color = "var(--black-font)";
+   }
+   rateRows[n].style.color = "rgb(13 110 253 / 45%)";
+   rateRows[n].querySelectorAll("td")[1].textContent = 1;
+   console.log(n);
 }
 
 // /Exchange rate chart//

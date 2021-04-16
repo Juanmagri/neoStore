@@ -74,6 +74,10 @@ h1 {
    background: var(--gray-button);
 }
 
+.rate-row {
+   cursor: pointer;
+}
+
 /* Main Content */
 
 /* Cards */
