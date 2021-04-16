@@ -65,15 +65,15 @@ amount.addEventListener("keyup", (eve) => {
 // /Converter //
 
 
-// Exchange Rate //
+// Exchange rate chart//
 const getRates = async () => {
    const currencyList = await getCurrencies();
    let rateRows = document.querySelectorAll(".rate-row");
-   let equivalent = document.query;
    let i = 1;
 
    while (i < rateRows.length) {
       let curr = rateRows[i].querySelectorAll("td")[0].textContent;
+
       rateRows[i].querySelectorAll("td")[1].textContent = currencyList[curr];
       i++;
    }
@@ -81,4 +81,9 @@ const getRates = async () => {
 
 getRates();
 
-// /Exchange Rate //
+
+const a = (n) => {
+   document.querySelectorAll(".rate-row")[n].querySelectorAll("td")[1].textContent = 1;
+}
+
+// /Exchange rate chart//
