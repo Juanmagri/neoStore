@@ -39,10 +39,6 @@ h1 {
    background-color: rgba(256, 256, 256, 0.2);
 }
 
-.rate-row:hover {
-   background-color: rgba(92, 160, 255, 0.06);
-}
-
 /* /Landing */
 
 /* Main Content */
@@ -76,6 +72,10 @@ h1 {
 
 .rate-row {
    cursor: pointer;
+}
+
+.rate-row:hover {
+   background-color: rgba(92, 160, 255, 0.06);
 }
 
 /* Main Content */

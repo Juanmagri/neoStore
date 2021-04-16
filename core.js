@@ -92,10 +92,11 @@ const a = async (n) => {
          rateRows[0].querySelectorAll("td")[1].textContent = parseFloat((1 / currencyList[currF]).toFixed(3));
       }
       rateRows[i].style.color = "var(--black-font)";
+      rateRows[i].style.backgroundColor = "";
    }
    rateRows[n].style.color = "rgb(13 110 253 / 45%)";
    rateRows[n].querySelectorAll("td")[1].textContent = 1;
-   console.log(n);
+   rateRows[n].style.backgroundColor = "rgba(92, 160, 255, 0.06)";
 }
 
 // /Exchange rate chart//
