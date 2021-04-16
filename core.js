@@ -70,15 +70,13 @@ const getRates = async () => {
    const currencyList = await getCurrencies();
    let rateRows = document.querySelectorAll(".rate-row");
    let equivalent = document.query;
-   let i = 0;
+   let i = 1;
+
    while (i < rateRows.length) {
-      // console.log("jeje")
-      let a = rateRows[i].querySelector("td").textContent;
-      rateRows[i].textContent;
+      let curr = rateRows[i].querySelectorAll("td")[0].textContent;
+      rateRows[i].querySelectorAll("td")[1].textContent = currencyList[curr];
       i++;
    }
-   // document.querySelectorAll(".rate-row")[0].textContent = currencyList.USD;
-
 }
 
 getRates();
