@@ -22,7 +22,7 @@ ratesAccess.addEventListener("click", () => {
 // /Main content //
 
 // Converter //
-let API = "https://api.ratesapi.io/api/latest";
+let API = "https://api.frankfurter.app/latest";
 let exchange = document.querySelector("#exchanged");
 let convert = document.querySelector("#convert");
 let amount = document.querySelector("#amount");
