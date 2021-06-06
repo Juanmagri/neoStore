@@ -15,6 +15,7 @@ body {
    );
    background-attachment: fixed;
    background-repeat: no-repeat;
+   overflow: overlay;
 }
 
 h1 {
@@ -22,7 +23,24 @@ h1 {
    font-weight: bold;
 }
 
+::-webkit-scrollbar {
+   width: initial;
+}
+
+::-webkit-scrollbar-track {
+   background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+   background: rgba(0, 0, 0, 18%);
+   border-radius: 1rem;
+}
+
 /* Landing */
+.navbar-brand {
+   margin-right: 5%;
+}
+
 #landing-content {
    flex-direction: column;
    height: 100%;
